@@ -5,9 +5,16 @@
 
             animateOnInit: true,
             
+			connectors: {
+				type: 'straight'
+			},
+			
+			rootOrientation: 'SOUTH',
+			
             node: {
                 collapsable: true
             },
+			
             animation: {
                 nodeAnimation: "easeOutBounce",
                 nodeSpeed: 700,
@@ -20,33 +27,31 @@
             children: [
                 {
                     image: "img/lana.png",
-                    collapsed: true,
                     children: [
                         {
                             image: "img/figgs.png"
-                        }
+                        },
+						{
+							image: "img/pam.png"
+						}
                     ]
                 },
                 {
                     image: "img/sterling.png",
-                    childrenDropLevel: 1,
                     children: [
                         {
-                            image: "img/woodhouse.png"
+                            image: "img/woodhouse.png",
+							children:[
+								{
+									image: "img/cheryl.png"
+								},
+								{
+									image: "img/pam.png"
+								}
+							]
                         }
                     ]
                 },
-                {
-                    pseudo: true,
-                    children: [
-                        {
-                            image: "img/cheryl.png"
-                        },
-                        {
-                            image: "img/pam.png"
-                        }
-                    ]
-                }
             ]
         }
     };
